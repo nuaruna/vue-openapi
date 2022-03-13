@@ -162,7 +162,7 @@ export default class BlockInfo extends Vue {
 
     const response = await http({
       baseURL: `${executingBlock.baseUrl}${executingBlock.endpoint}`,
-      data: executingBlock.body,
+      data: executingBlock.body ? JSON.parse(executingBlock.body) || '' : undefined,
       headers: executingBlock.headers ? JSON.parse(executingBlock.headers) || '' : undefined,
       method: executingBlock.method as Method,
       params: executingBlock.query ? JSON.parse(executingBlock.query) || '' : undefined,
