@@ -1,0 +1,1 @@
+export const API_BLOCKS_STORE_NAME = 'api-blocks-store';
